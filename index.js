@@ -9,6 +9,6 @@ app.get("/", () => {
 })
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log('Servis aktif: http://localhost:%s', port);
 });
