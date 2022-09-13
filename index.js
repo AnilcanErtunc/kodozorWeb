@@ -4,11 +4,11 @@ var port = 9999;
 app.use(express.json());
 
 
-app.get("/", () => {
+app.get("/", (req, res) => {
     res.send("Hello world");
 })
 
 
 app.listen(process.env.PORT || port, () => {
-    console.log('Servis aktif: http://localhost:%s', port);
+    console.log('Servis aktif: http://localhost:%s', process.env.PORT || port);
 });
