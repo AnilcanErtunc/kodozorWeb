@@ -4,8 +4,8 @@ var port = 9999;
 app.use(express.json());
 
 
-app.get("/",() => {
-    res.sendFile(path.join(__dirname, 'home.html'))
+app.get("/", () => {
+    res.send("Hello world");
 })
 
 
